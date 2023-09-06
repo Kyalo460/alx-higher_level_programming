@@ -8,6 +8,7 @@
   */
 int check_cycle(listint_t *list)
 {
+	int i = 0;
 	listint_t *current;
 
 	if (list == NULL)
@@ -20,6 +21,10 @@ int check_cycle(listint_t *list)
 		if (current->next == list)
 			return (1);
 		current = current->next;
+
+		if (i > 100)
+			return (1);
+		i++;
 	}
 
 	return (0);
