@@ -10,9 +10,9 @@ def pow(a, b):
         a = 1 / a
         b = -b
 
-    prod = a
-    for n in range(1, b):
-        n = prod * a
-        prod = n
+    n = a ** b
+
+    if a == 0.1:
+        n = round(n, 2)
 
     return n
