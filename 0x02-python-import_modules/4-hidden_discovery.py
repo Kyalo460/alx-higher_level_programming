@@ -6,6 +6,6 @@ if __name__ == "__main__":
     strings = dir(hidden_4)
     index = 9
 
-    for n in range(9, 12):
-        print("{:s}".format(strings[index]))
-        index += 1
+    for name in strings:
+        if not name.startswith("__"):
+            print(name)
