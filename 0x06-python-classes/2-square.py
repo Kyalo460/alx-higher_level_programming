@@ -6,7 +6,11 @@ class Square:
     """Inside the class."""
 
     def __init__(self, size=0):
-        """Private instance attribute."""
+        """Private instance attribute.
+
+        Args:
+            size (int): The size of the new square.
+        """
 
         if not isinstance(size, int):
             raise TypeError("size must be an int")
