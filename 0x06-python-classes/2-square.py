@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Defines a class Square"""
+"""Defines a class Square."""
 
 
 class Square:
     """Inside the class."""
 
     def __init__(self, size=0):
-        """Private instance attribute.
+        """Initialize a new square.
 
         Args:
             size (int): The size of the new square.
