@@ -1,0 +1,18 @@
+Test suite for 3-say_my_name.py.
+
+Import module.
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Brian", "Kyalo")
+My name is Brian Kyalo
+
+>>> say_my_name("Brian")
+My name is Brian 
+
+>>> say_my_name("Brian", 22)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(['B', 'r', 'i', 'a', 'n'], "Kyalo")
+Traceback (most recent call last):
+TypeError: first_name must be a string
