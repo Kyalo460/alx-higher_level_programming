@@ -3,5 +3,7 @@
 
 
 class Rectangle:
-    """Definition of the class."""
+    """This is an empty class that will soon
+    be filled with attributes.
+    """
     pass
