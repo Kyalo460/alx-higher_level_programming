@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This function draws a square using 
+"""This function draws a square using
 '#' with width of the integer argument given.
 """
 
@@ -20,6 +20,6 @@ def print_square(size):
         return
 
     for w in range(0, size):
-        for l in range(0, size):
+        for j in range(0, size):
             print("#", end='')
         print()

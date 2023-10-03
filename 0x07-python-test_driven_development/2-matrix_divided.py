@@ -27,7 +27,8 @@ def matrix_divided(matrix, div):
     for n in matrix:
         for j in n:
             if type(j) not in [int, float]:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix \
+                        (list of lists) of integers/floats")
 
     new_matrix = []
     new_list = []
