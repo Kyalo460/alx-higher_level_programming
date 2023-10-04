@@ -28,6 +28,18 @@ class TestMaxInteger(unittest.TestCase):
         """Tests a list with one value."""
         self.assertEqual(max_integer([2]), 2)
 
+    def test_max_middle(self):
+        """Max value is in the middle of a list."""
+        self.assertEqual(max_integer([2, 4, 7, 1, 5], 7))
+
+    def test_one_negative(self):
+        """One negative number in the list."""
+        self.assertEqual(max_integer([1, 2, 3, -1, 7], 7))
+
+    def test_all_negative(self):
+        """All numbers are negative in the list."""
+        self.assertEqual(max_integer([-1, -2, -3, -4], -1))
+
 
 if __name__ == "__main__":
     unittest.main()
