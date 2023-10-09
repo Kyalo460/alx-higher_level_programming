@@ -1,0 +1,18 @@
+Tests for 1-my_list.py
+
+Import module
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(7)
+>>> my_list.append(8)
+>>> my_list.append(2)
+
+Check sorted list
+>>> my_list.print_sorted()
+[2, 3, 7, 8]
+
+Check original list
+>>> print(my_list)
+[3, 7, 8, 2]
