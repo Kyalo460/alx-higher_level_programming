@@ -9,14 +9,18 @@ Making an object of the class
 Testing values
 >>> bg.integer_validator("float", 1.2)
 Traceback (most recent call last):
-[TypeError] float must be an integer
+TypeError: float must be an integer
 
 >>> bg.integer_validator("negative", -12)
 Traceback (most recent call last):
-[ValueError] negative must be greater than 0
+ValueError: negative must be greater than 0
 
 >>> bg.integer_validator("zero", 0)
 Traceback (most recent call last):
-[ValueError] zero must be greater than 0
+ValueError: zero must be greater than 0
+
+>>> bg.integer_validator("bool", True)
+Traceback (most recent call last):
+TypeError: bool must be an integer
 
 >>> bg.integer_validator("goodInput", 7)
