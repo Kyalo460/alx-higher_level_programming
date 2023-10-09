@@ -7,7 +7,9 @@ class Rectangle(BaseGeometry):
     """This class will inherit from class BaseGeometry."""
 
     def __init__(self, width, height):
-        """Calling function from BaseGeometry to validate values before storing them."""
+        """Calling function from BaseGeometry to validate values
+        before storing them.
+        """
         self.__width = width
         self.__height = height
         super().integer_validator("width", self.__width)
