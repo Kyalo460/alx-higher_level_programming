@@ -6,4 +6,7 @@ directly or indirectly from an instance.
 
 def inherits_from(obj, a_class):
     """Returns True or False."""
-    return bool(isinstance(obj, a_class))
+    if type(obj) is a_class:
+        return False
+
+    return bool(issubclass(obj.__class__, a_class))
