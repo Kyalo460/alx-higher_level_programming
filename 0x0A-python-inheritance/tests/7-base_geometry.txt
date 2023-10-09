@@ -1,0 +1,22 @@
+Tests for 7-bae_geometry.py
+
+Importing module
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Making an object of the class
+>>> bg = BaseGeometry()
+
+Testing values
+>>> bg.integer_validator("float", 1.2)
+Traceback (most recent call last):
+[TypeError] float must be an integer
+
+>>> bg.integer_validator("negative", -12)
+Traceback (most recent call last):
+[ValueError] negative must be greater than 0
+
+>>> bg.integer_validator("zero", 0)
+Traceback (most recent call last):
+[ValueError] zero must be greater than 0
+
+>>> bg.integer_validator("goodInput", 7)
