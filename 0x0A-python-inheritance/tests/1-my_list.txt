@@ -16,3 +16,9 @@ Check sorted list
 Check original list
 >>> print(my_list)
 [3, 7, 8, 2]
+
+Check list with duplicate elements
+>>> my_list.append(2)
+>>> my_list.append(7)
+>>> my_list.print_sorted()
+[2, 2, 3, 7, 7, 8]
