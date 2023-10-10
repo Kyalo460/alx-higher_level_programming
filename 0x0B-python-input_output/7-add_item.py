@@ -1,4 +1,4 @@
-#!/c/Users/pc/AppData/Local/Microsoft/WindowsApps/python3
+#!/usr/bin/python3
 """A method that will add strings to a list
 in a file.
 """
