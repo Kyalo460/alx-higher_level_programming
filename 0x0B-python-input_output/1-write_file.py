@@ -5,5 +5,9 @@
 def write_file(filename="", text=""):
     """Creates a newfile or overwrites the existing one."""
 
+    chars = 0
+
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(text)
+        chars = f.write(text)
+
+        return chars
