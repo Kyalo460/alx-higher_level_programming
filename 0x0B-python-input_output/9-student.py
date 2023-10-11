@@ -19,7 +19,7 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """Returns a dictionary that has 
+        """Returns a dictionary that has
         attribute:value.
         """
         return vars(self)
