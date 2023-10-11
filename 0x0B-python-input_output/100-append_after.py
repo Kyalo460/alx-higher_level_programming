@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """A method that will append a certain line
 after a line that contains a specific string.
 """
