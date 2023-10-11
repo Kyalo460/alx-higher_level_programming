@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""Serializes a class to json."""
-import json
+"""Will return a serializable dict for JSON"""
 
 
 def class_to_json(obj):
-    """Will return a json dictionary tha represents the class's
-    attributes.
+    """Will return a dictionary that represents the class's
+    attributes and values.
     """
 
-    json_string = json.dumps(obj, default=vars)
-    return json.loads(json_string)
+    return vars(obj)
