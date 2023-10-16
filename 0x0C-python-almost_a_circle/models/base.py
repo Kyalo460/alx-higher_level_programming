@@ -48,7 +48,7 @@ class Base:
 
             new_list.append(object_dict)
 
-        json_string = json.dumps(new_list)
+        json_string = cls.to_json_string(new_list)
         filename = cls.__name__ + '.json'
 
         with open(filename, 'w', encoding='utf-8') as file:

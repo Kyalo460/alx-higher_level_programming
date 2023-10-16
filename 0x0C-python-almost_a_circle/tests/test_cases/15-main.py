@@ -10,5 +10,5 @@ if __name__ == "__main__":
     r3 = Square(2)
     Rectangle.save_to_file([r1, r2, r3])
 
-    with open("Rectangle.json", "r") as file:
+    with open("Rectangle.json", "r", encoding="utf-8") as file:
         print(file.read())
