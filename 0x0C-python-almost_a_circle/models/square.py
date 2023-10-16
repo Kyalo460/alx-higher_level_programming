@@ -56,7 +56,8 @@ class Square(Rectangle):
         object_dict = {}
 
         for key in list_of_attributes:
-            object_dict.update({(key, getattr(self, list_of_attributes[count]))})
+            object_dict.update
+            ({(key, getattr(self, list_of_attributes[count]))})
             count += 1
 
         return object_dict

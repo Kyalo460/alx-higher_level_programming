@@ -93,9 +93,8 @@ class Rectangle(Base):
         """Returns a string that displays the values of the
         instance.
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                                                     self.y, self.width,
-                                                     self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format
+    (self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """Updates attributes provided chronoligically.
@@ -118,7 +117,8 @@ class Rectangle(Base):
         object_dict = {}
 
         for key in list_of_attributes:
-            object_dict.update({(key, getattr(self, list_of_attributes[count]))})
+            object_dict.update
+            ({(key, getattr(self, list_of_attributes[count]))})
             count += 1
 
         return object_dict
