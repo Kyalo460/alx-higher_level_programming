@@ -34,19 +34,20 @@ class Base:
     def save_to_file(cls, list_objs):
         """Saves list_objs to a file as a json string."""
         new_list = []
-        for obj in list_objs:
-            if type(obj) is models.rectangle.Rectangle:
-                list_of_attributes = ['id', 'width', 'height', 'x', 'y']
-            elif type(obj) is models.square.Square:
-                list_of_attributes = ['id', 'size', 'x', 'y']
-            else:
-                raise TypeError("The object does not exist")
+        if list_objs is not None:
+            for obj in list_objs:
+                if type(obj) is models.rectangle.Rectangle:
+                    list_of_attributes = ['id', 'width', 'height', 'x', 'y']
+                elif type(obj) is models.square.Square:
+                    list_of_attributes = ['id', 'size', 'x', 'y']
+                else:
+                    raise TypeError("The object does not exist")
 
-            object_dict = {}
-            for name in list_of_attributes:
-                object_dict.update({(name, getattr(obj, name))})
+                object_dict = {}
+                for name in list_of_attributes:
+                    object_dict.update({(name, getattr(obj, name))})
 
-            new_list.append(object_dict)
+                new_list.append(object_dict)
 
         json_string = cls.to_json_string(new_list)
         filename = cls.__name__ + '.json'
