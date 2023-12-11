@@ -5,9 +5,9 @@ if (!parseInt(args[2])) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < parseInt(args[2]); i++) {
-    for (let i = 0; i < parseInt(args[2]); i++){
-      process.stdout.write('+');
+    for (let i = 0; i < parseInt(args[2]); i++) {
+      process.stdout.write('X');
     }
-    console.log()
+    console.log();
   }
 }
