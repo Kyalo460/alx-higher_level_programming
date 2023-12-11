@@ -6,13 +6,14 @@ let secBiggest = 0;
 
 if (len > 3) {
   biggest = args[2];
+  secBiggest = args[3];
 
   for (let i = 3; i < len; i++) {
-    if (args[i] > biggest) {
+    if (parseInt(args[i]) > biggest) {
       secBiggest = biggest;
-      biggest = args[i];
-    } else if (args[i] > secBiggest) {
-      secBiggest = args[i];
+      biggest = parseInt(args[i]);
+    } else if (parseInt(args[i]) > secBiggest) {
+      secBiggest = parseInt(args[i]);
     }
   }
 }
