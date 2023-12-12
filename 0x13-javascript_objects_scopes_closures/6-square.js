@@ -1,12 +1,8 @@
 #!/usr/bin/node
 
-const Rectangle = require('./4-rectangle');
+const BaseSquare = require('./5-square');
 
-class Square extends Rectangle {
-  constructor (s) {
-    super(s, s);
-  }
-
+class Square extends BaseSquare {
   charPrint (c) {
     // Prints a square with C
     if (!c) {
