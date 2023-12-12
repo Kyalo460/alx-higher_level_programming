@@ -8,7 +8,7 @@ class Rectangle {
   }
 
   print () {
-    //Prints a rectangle with Xs
+    // Prints a rectangle with Xs
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
         process.stdout.write('X');
