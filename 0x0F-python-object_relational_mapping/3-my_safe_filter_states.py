@@ -14,8 +14,8 @@ if __name__ == "__main__":
     cur = db.cursor()
     if sys.argv[4] in ["California",
                        "Arizona", "Texas", "New York", "Nevada"]:
-        q = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
-            sys.argv[4])
-        cur.execute(q)
+        cur.execute("SELECT * FROM states WHERE BINARY "
+                    "name = %s ORDER BY id ASC",
+                    [sys.argv[4]])
         for row in cur.fetchall():
             print(row)
