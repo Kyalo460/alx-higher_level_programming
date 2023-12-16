@@ -14,6 +14,6 @@ if __name__ == "__main__":
 
     cur.execute(
         "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC",
-        [sys.argv[4]])
+        (sys.argv[4],))
     for row in cur.fetchall():
         print(row)
