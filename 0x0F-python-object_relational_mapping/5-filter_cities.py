@@ -20,6 +20,8 @@ if __name__ == "__main__":
                 (sys.argv[4],))
 
     rows = cur.fetchall()
+    if len(rows) == 0:
+        print()
     i = 1
     for city in rows:
         print(city[0], end='')
