@@ -13,7 +13,7 @@ if __name__ == "__main__":
     session = Session()
 
     object = session.query(State).order_by(State.id).first()
-    if len(object) == 0:
+    if object is None:
         print()
     else:
         print("{}: {}".format(object.id, object.name))
