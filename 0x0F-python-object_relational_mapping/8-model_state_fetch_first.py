@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that prints the first State object from the database hbtn_0e_6_usa."""
+"""prints the first State object from the database hbtn_0e_6_usa."""
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -13,4 +13,7 @@ if __name__ == "__main__":
     session = Session()
 
     object = session.query(State).order_by(State.id).first()
-    print("{}: {}".format(object.id, object.name))
+    if len(object) == 0:
+        print()
+    else:
+        print("{}: {}".format(object.id, object.name))
