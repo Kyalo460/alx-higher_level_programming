@@ -3,4 +3,4 @@
 # sends a request to that URL
 # and displays the size of the body of the response
 
-curl -w '%{size_download}\n' -s "#1"
+curl -s "#1" | wc -c
